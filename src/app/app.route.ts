@@ -3,6 +3,7 @@ import { RouterModule, Routes, Resolve } from '@angular/router';
 import { HomepageComponent } from './homepage/homepage.component';
 import { StudentpageComponent } from './studentpage/studentpage.component';
 import { StudentIndividualComponent } from './student-individual/student-individual.component';
+import { ErrorComponent } from './error/error.component';
 
 import { StudentCanActivate } from './studentpage/studentGuard.guard';
 import { StudentResolver } from './studentpage/student-resolver.resolver';
@@ -23,8 +24,11 @@ const lab14Routes: Routes = [
 		component: StudentIndividualComponent,
 		canActivate: [StudentIndividualCanActivate]
 	}, {
+		path: '404',
+		component: ErrorComponent
+	}, {
 		path:'**',
-		redirectTo:'homepage'
+		redirectTo:'404'
 	}
 ];
 

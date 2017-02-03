@@ -13,6 +13,7 @@ import { StudentCanActivate } from './studentpage/studentGuard.guard';
 import { StudentResolver } from './studentpage/student-resolver.resolver';
 import { StudentIndividualComponent } from './student-individual/student-individual.component';
 import { StudentIndividualCanActivate } from './student-individual/StudentIndividualCanActivate.guard';
+import { ErrorComponent } from './error/error.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { StudentIndividualCanActivate } from './student-individual/StudentIndivi
     AppComponent,
     HomepageComponent,
     StudentpageComponent,
-    StudentIndividualComponent
+    StudentIndividualComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

@@ -14,6 +14,6 @@ export class StudentIndividualCanActivate implements CanActivate {
 				return true;
 			}
 		} 
-		this.router.navigate(['homepage']);
+		this.router.navigate(['404']);
 	}
 }
