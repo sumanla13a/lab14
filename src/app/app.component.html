@@ -1,3 +1,7 @@
 <h1>
-  {{title}}
+  Lab 14
 </h1>
+<nav>
+	<span *ngFor="let link of Links"><a [routerLink]="link">{{link.join('/')}}</a>&nbsp;|&nbsp;</span>
+</nav>
+<router-outlet></router-outlet>
