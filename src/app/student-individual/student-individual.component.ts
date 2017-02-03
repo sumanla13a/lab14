@@ -13,9 +13,10 @@ export class StudentIndividualComponent implements OnInit {
   constructor(private studentService: StudentServiceService, private route:ActivatedRoute) {}
 
   ngOnInit() {
-/*  this.route.params.subscribe( function(params) {
-  		this.student = this.studentService.getCurrent(params.id);
-  	}.bind(this));*/
+  	if(!this.studentService.current)
+	  	this.route.params.subscribe( function(params) {
+	  		this.studentService.setCurrent(params.id);
+	  	}.bind(this));
   }
 
 }
